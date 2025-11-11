@@ -1,0 +1,14 @@
+{
+  "name": "veecee Codespace",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "forwardPorts": [3000],
+  "postStartCommand": "bash -lc 'npm install && nohup npm start > /tmp/npm-start.log 2>&1 & echo $! > /tmp/npm-start.pid'",
+  "portsAttributes": {
+    "3000": {
+      "label": "veecee app",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
+  },
+  "remoteUser": "vscode"
+}
